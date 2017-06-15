@@ -17,8 +17,8 @@ var app = express();
 app.use(morgan('dev')); // dev is a preprogrammed log output that morgan supports
 
 app.use('/dishes', dishRouter); // if url contains /dishes, apply dishRouter
-app.use('/promos', promoRouter); // if url contains /promos, apply promoRouter
-app.use('/leaders', leaderRouter); // if url contains /leaders, apply leaderRouter
+app.use('/promotions', promoRouter); // if url contains /promos, apply promoRouter
+app.use('/leadership', leaderRouter); // if url contains /leaders, apply leaderRouter
 
 app.use(express.static(__dirname + '/public')); // public is source of static files
 
