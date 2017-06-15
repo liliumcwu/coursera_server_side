@@ -1,3 +1,10 @@
+/* Author: Lily, Date: June 15, 2017
+  This Node module is implemented and used within my server to support
+  the /promos end point. The REST API supports GET, POST and DELETE
+  operations on /dishes and GET, PUT and DELETE operations on
+  /promos/:id end points.
+*/
+
 var express = require('express');
 var bodyParser = require('body-parser');
 // enables us to parse the data and add it to a javascript object
@@ -45,4 +52,4 @@ promoRouter.route('/:promoId')
   res.end('Deleting promo: ' + req.params.promoId);
 }); // completes this chain
 
-module.exports = promoRouter;
+module.exports = promoRouter; // so server can use

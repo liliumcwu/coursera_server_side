@@ -1,3 +1,10 @@
+/* Author: Lily, Date: June 15, 2017
+  This Node module is implemented and used within my server to support
+  the /dishes end point. The REST API supports GET, POST and DELETE
+  operations on /dishes and GET, PUT and DELETE operations on
+  /dishes/:id end points.
+*/
+
 var express = require('express');
 var bodyParser = require('body-parser');
 // enables us to parse the data and add it to a javascript object
@@ -45,6 +52,6 @@ dishRouter.route('/:dishId')
   res.end('Deleting dish: ' + req.params.dishId);
 }); // completes this chain
 
-module.exports = dishRouter;
+module.exports = dishRouter; // so server can use
 
 

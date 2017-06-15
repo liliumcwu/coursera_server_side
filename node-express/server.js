@@ -1,4 +1,8 @@
-/* to be submitted for assignment 1 */
+/* Author: Lily, Date: June 15, 2017
+  This Node module creates a server. It implements and uses dishRouter,
+  promoLeader, and leaderRouter to support the routes for their
+  respective REST APIs.
+*/
 var express = require('express');
 var morgan = require('morgan'); // allows us to log info on server side
 var dishRouter = require('./dishRouter');
