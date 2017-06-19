@@ -13,7 +13,7 @@ db.once('open', function() {
   console.log('Connected correctly to server');
   // create a new promotion
   Promotions.create({
-    name: 'Weekend Grand Buffet',
+    name: 'Weekend rqw Buffet',
     image: "images/buffet.png",
     label: 'new',
     price: "19.99",
@@ -37,7 +37,7 @@ db.once('open', function() {
             .exec(function (err, promotion) {
               if (err) throw err;
               console.log('Updated Dish!');
-              console.log(dish);
+              console.log(promotion);
 
               db.collection('promotions').drop(function() {
                 db.close();

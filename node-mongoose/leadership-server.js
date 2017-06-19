@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     assert = require('assert');
 
-var Leaders = require('./models/leaders');
+var Leaders = require('./models/leadership');
 
 // Connection URL
 var url = 'mongodb://localhost:27017/conFusion';
@@ -13,7 +13,7 @@ db.once('open', function() {
   console.log('Connected correctly to server');
   // create a new leader
   Leaders.create({
-    name: 'Peter Pan',
+    name: 'bruh Pan',
     image: "images/alberto.png",
     designation: 'Chief Executive Officer',
     abbr: "CEO",
@@ -37,7 +37,7 @@ db.once('open', function() {
             .exec(function (err, leader) {
               if (err) throw err;
               console.log('Updated Dish!');
-              console.log(dish);
+              console.log(leader);
 
               db.collection('leaders').drop(function() {
                 db.close();
